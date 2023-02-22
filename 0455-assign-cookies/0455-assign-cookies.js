@@ -12,11 +12,7 @@ const findContentChildren=(g, s)=>{
     let j=0;
     let content = 0;
     while(i<g.length && j<s.length){
-        if(s[j]>=g[i]){
-            content++;
-            i++
-        }
-        j++
+        s[j] >= g[i] ? (i++, j++) : j++;
     }
-    return content;
+    return i;
 };
