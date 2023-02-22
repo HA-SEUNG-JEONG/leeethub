@@ -8,11 +8,11 @@ const findContentChildren=(g, s)=>{
     // s - cookies
     g.sort((a, b) => a - b);
     s.sort((a, b) => a - b);
-    let i=0;
-    let j=0;
+    let a=0;
+    let b=0;
     let content = 0;
-    while(i<g.length && j<s.length){
-        s[j] >= g[i] ? (i++, j++) : j++;
+    while(a<g.length && b<s.length){
+        s[b] >= g[a] ? (a++, b++) : b++;
     }
-    return i;
+    return a;
 };
