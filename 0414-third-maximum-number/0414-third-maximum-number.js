@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var thirdMax = function(nums) {
+const thirdMax=(nums)=>{
     // 주어진 배열에서 세번째로 큰 숫자 고르기
     // let maxNum = 0;
     // for(let i=0;i<nums.length;i++){
