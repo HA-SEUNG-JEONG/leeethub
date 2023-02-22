@@ -11,7 +11,9 @@ var findTheDifference = function(s, t) {
     sList.sort();
     tList.sort();
     
+    // tList를 돌면서 sList와 비교
+    // 
     for(let i=0;i<tList.length;i++){
-        if(i===sList.length||tList[i]!==sList[i]) return tList[i];
+        if(tList[i]!==sList[i]) return tList[i];
     }
 };
