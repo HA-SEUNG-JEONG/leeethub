@@ -14,6 +14,6 @@ var findTheDifference = function(s, t) {
     // tList를 돌면서 sList와 비교
     // 
     for(let i=0;i<tList.length;i++){
-        if(tList[i]!==sList[i]) return tList[i];
+        if(i===sList.length||tList[i]!==sList[i]) return tList[i];
     }
 };
