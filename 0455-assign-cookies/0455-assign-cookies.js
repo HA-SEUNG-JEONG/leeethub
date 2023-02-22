@@ -3,7 +3,7 @@
  * @param {number[]} s
  * @return {number}
  */
-function findContentChildren(g, s){
+const findContentChildren=(g, s)=>{
     // g - children
     // s - cookies
     g.sort((a, b) => a - b);
