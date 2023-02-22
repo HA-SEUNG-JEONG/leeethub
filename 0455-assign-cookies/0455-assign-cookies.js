@@ -3,7 +3,7 @@
  * @param {number[]} s
  * @return {number}
  */
-var findContentChildren = function(g, s) {
+function findContentChildren(g, s){
     // g - children
     // s - cookies
     g.sort((a, b) => a - b);
