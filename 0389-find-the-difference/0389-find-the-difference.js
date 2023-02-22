@@ -17,5 +17,3 @@ const findTheDifference=(s, t)=>{
         if(i===sList.length||tList[i]!==sList[i]) return tList[i]; //추가될(?) 요소를 return
     }
 };
-
-console.log(findTheDifference('abcd','abcde'))
