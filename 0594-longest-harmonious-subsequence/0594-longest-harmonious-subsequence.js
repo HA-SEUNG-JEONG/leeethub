@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findLHS = function(nums) {
+const findLHS=(nums)=>{
     // 최대값과 최소값의 차이가 정확히 1이어야 함
  const map = new Map();
   let maxLength = 0;
