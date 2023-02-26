@@ -20,12 +20,13 @@ const findErrorNums=(nums)=>{
     else duplicate = num;
   });
 
-  for (let i = 1; i <= n; i++) {
-    if (!freq[i]) {
-      missing = i;
-      break;
+  [...Array(n).keys()].some((index) => {
+    if (!freq[index + 1]) {
+      missing = index + 1;
+      return true;
     }
-  }
+  });
+
 
   return [duplicate, missing];
 };
