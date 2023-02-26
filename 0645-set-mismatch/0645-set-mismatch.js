@@ -12,13 +12,13 @@ const findErrorNums=(nums)=>{
 
   const n = nums.length;
   const freq = {};
-  let duplicate = -1,
-    missing = -1;
+  let duplicate = 0,
+    missing = 0;
 
-   for (let i = 0; i < n; i++) {
-    if (!freq[nums[i]]) freq[nums[i]] = 1;
-    else duplicate = nums[i];
-  }
+  nums.forEach((num) => {
+    if (!freq[num]) freq[num] = 1;
+    else duplicate = num;
+  });
 
   for (let i = 1; i <= n; i++) {
     if (!freq[i]) {
@@ -26,5 +26,6 @@ const findErrorNums=(nums)=>{
       break;
     }
   }
-    return [duplicate, missing];
+
+  return [duplicate, missing];
 };
