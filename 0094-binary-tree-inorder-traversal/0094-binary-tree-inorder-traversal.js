@@ -10,14 +10,14 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function(root) {
-    const data = [];
+const inorderTraversal = (root) => {
+  const data = [];
   let current = root;
   const traverse = (node) => {
     if (node.left) traverse(node.left);
     data.push(node.val);
     if (node.right) traverse(node.right);
   };
-    if (current) traverse(current);
+  if (current) traverse(current);
   return data;
 };
