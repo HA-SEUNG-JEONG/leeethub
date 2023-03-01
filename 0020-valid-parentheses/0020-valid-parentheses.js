@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
+const isValid = (s) => {
   const stack = [];
   const openToClose = {
     "(": ")",
