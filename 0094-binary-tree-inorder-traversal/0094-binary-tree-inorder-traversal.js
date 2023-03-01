@@ -18,6 +18,6 @@ const inorderTraversal = (root) => {
     data.push(node.val);
     if (node.right) traverse(node.right);
   };
-  if (current) traverse(current);
+  if (current) traverse(current); // 비어있지 않은 경우에만 traverse 호출
   return data;
 };
