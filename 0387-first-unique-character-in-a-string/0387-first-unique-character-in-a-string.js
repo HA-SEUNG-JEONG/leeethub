@@ -7,9 +7,7 @@ const firstUniqChar = (s) => {
 
   let result = -1;
   Array.from(s).forEach((char, index) => {
-    if (s.indexOf(char) === s.lastIndexOf(char) && result === -1) {
-      result = index;
-    }
+    if (s.indexOf(char) === s.lastIndexOf(char) && result === -1) result = index;
   });
   return result;
 };
