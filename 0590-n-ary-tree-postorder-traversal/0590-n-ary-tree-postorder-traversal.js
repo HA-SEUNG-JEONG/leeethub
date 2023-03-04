@@ -10,17 +10,16 @@
  * @param {Node|null} root
  * @return {number[]}
  */
-var postorder = function(root) {
-   if (!root) return [];
+const postorder = (root) => {
+  const arr = [];
+  const traverse = (node) => {
+    if (node === null) return;
 
-  const stack = [root];
-  const result = [];
-
-  while (stack.length) {
-    const node = stack.pop();
-    result.unshift(node.val);
-    stack.push(...node.children);
-  }
-
-  return result; 
+    for (const child of node.children) {
+      traverse(child);
+    }
+    arr.push(node.val);
+  };
+  traverse(root);
+  return arr;
 };
