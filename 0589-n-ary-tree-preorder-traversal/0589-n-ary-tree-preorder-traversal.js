@@ -12,16 +12,13 @@
  */
 const preorder = (root) => {
   // Given the root of an n-ary tree, return the preorder traversal of its nodes' values.
-  if (!root) return [];
+  const arr = [];
+  const traverse = (node) => {
+    if (node === null) return;
 
-  const stack = [root];
-  const result = [];
-
-  while (stack.length) {
-    const node = stack.pop();
-    result.push(node.val);
-    stack.push(...node.children.reverse());
-  }
-
-  return result;
+    arr.push(node.val);
+    node.children.forEach((child) => traverse(child));
+  };
+  traverse(root);
+  return arr;
 };
