@@ -15,12 +15,16 @@ const backspaceCompare = (s, t) => {
     if (t[i] === "#") arr2.pop();
     else arr2.push(t[i]);
   }
-  //   // 두 배열을 비교하여 문자열이 같은지 여부를 반환
-  //   if (arr1.length !== arr2.length) return false;
-
-  //   for (let k = 0; k < arr1.length; k++) {
-  //     if (arr1[k] !== arr2[k]) return false;
-  //   }
-  //   return true;
   return arr1.join("") === arr2.join("");
 };
+
+// 다른풀이
+// const process = s => {
+//     const res = [];
+//     for (const item of s.split('')) {
+//         item === '#' ? res.pop() : res.push(x);
+//     }
+//     return res.join('')
+// }
+
+// const backspaceCompare = (s, t) => process(s) == process(t);
