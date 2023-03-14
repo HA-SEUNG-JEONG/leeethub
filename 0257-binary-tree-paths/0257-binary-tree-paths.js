@@ -15,18 +15,20 @@ const binaryTreePaths = (root) => {
   const paths = [];
 
   const dfs = (node, path) => {
-    if (!node) return;
-    path += node.val;
+    if (!node) return; // null인 경우, 탐색 중지
+    path += node.val; // 경로에 현재 노드 값 추가
 
     if (!node.left && !node.right) {
-      paths.push(path);
+      // leaf 노드인 경우
+      paths.push(path); // 경로를 결과 배열에 추가
       return;
     }
-    path += "->";
-    dfs(node.left, path);
-    dfs(node.right, path);
+
+    path += "->"; // 경로에 "->" 추가하여 자식 노드와 구분
+    dfs(node.left, path); // 왼쪽 자식 노드 호출
+    dfs(node.right, path); // 오른쪽 자식 노드 호출
   };
 
-  dfs(root, "");
+  dfs(root, ""); // 루트 노드에서부터 경로 탐색 시작
   return paths;
-}
+};
